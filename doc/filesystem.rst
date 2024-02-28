@@ -195,8 +195,53 @@ in the specific subdirectory.  This mimics the POSIX behavior for
 directory traversal most C programmers are used to.
 
 
-Uploading files to file system
-------------------------------
+Uploading files to file system (combined firmware and filesystem)
+-----------------------------------------------------------------
+
+Since PullRequest #??? Filsystem generation is integrated into the
+“compile and/or upload” action of Arduino.
+There is no need to download any additional tool.
+
+Its configuration has 3 entries (“Upload”, "Filesystem" and "Export") in
+the IDE's "Tools" menu, and is described as follows:
+
+Menu-Entry “Upload” lets You choose between:
+- Sketch
+- Filesystem
+- Both
+This Menu controls which parts are uploaded when "Sketch->Upload" (Ctrl-U)
+is selected from the Arduino Menu.
+
+Menu-Entry “Filesystem” lets You choose between:
+- Off
+- LitteFs
+- SPIFFS
+This Menu controls which Fs will be created when "Sketch->Compile" (Ctrl-R)
+is selected from the Arduino Menu. The Fs will always be created inside the
+"export" dir (see below). 
+
+Menu-Entry “Export” let You choose between:
+- Off
+- .bin & .bin.signed)
+- Create & Export gzipped Binaries too
+This Menu controls export & generation of (extra) Sketch-Binaries.
+
+The "export" dir
+................
+After a (successful) compile, the files will be exported to a subdir
+“bin/{variant}” of Your sketch directory
+(“{variant}” replaced with the name of the board as shown behind
+“Tools -> Board:”).
+Signed variants of all Binaries are generated similar to the
+“automatic signing” done for normal sketch binary.
+
+As valid for the "old" tools mentioned below, it is nessesary to place
+files you want to be inside the generated file system into a directory
+named ``data`` inside Your sketch directory.
+
+
+Uploading files to file system (old tools)
+------------------------------------------
 
 *ESP8266FS* is a tool which integrates into the Arduino IDE. It adds a
 menu item to *Tools* menu for uploading the contents of sketch data
