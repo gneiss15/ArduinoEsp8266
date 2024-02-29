@@ -91,7 +91,7 @@ def main( argsIn = None ):
 
     EraseFilePath = ''
     filesUploaded = []
-try:
+    try:
         if ( Args.Upload & 1 ) == 1:
             if len( Args.erase_cmd ) and Args.erase_cmd[ 0 ] == "erase_flash":
                 esptoolArgs += [ '--erase-all' ]
@@ -116,7 +116,7 @@ try:
         #Debug( str( esptoolArgs ) )
         esptool.main( esptoolArgs )
         Msg( '...files uploaded: %s' % ", ".join( filesUploaded ) )
-finally:
+    finally:
         if len( EraseFilePath ):
             os.remove( EraseFilePath )
     
