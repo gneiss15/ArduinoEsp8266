@@ -68,7 +68,7 @@ build.iramfloat=-DFP_IN_IROM
 
 # Fully qualified file names for processing sketch global options
 globals.h.source.fqfn={build.source.path}/{build.project_name}.globals.h
-commonhfile.fqfn={build.core.path}/CommonHFile.h
+#commonhfile.fqfn={build.core.path}/CommonHFile.h
 build.opt.fqfn={build.path}/core/build.opt
 build.opt.flags="@{build.opt.fqfn}"
 mkbuildoptglobals.extra_flags=

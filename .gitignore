@@ -1,24 +1,12 @@
-.DS_Store
-tools/dist/
-tools/xtensa-lx106-elf/
-tools/mkspiffs/
-tools/mklittlefs/
-tools/python3/
-package/versions/
-exclude.txt
-
-tests/hosts/lcov/
-
 *.pyc
 *.gch
-
-boards.local.txt
-
 *.gcov
 *.gcno
 *.gcda
 *.o
 *.a
+
+boards.local.txt
 
 #Ignore files built by Visual Studio/Visual Micro
 [Dd]ebug*/
@@ -31,7 +19,7 @@ __vm/
 *.orig
 tools/sdk/ld/backup/*
 
-#Ignore my extra files
+# Ignore my extra files
 *.odt*
 tools/Gui.py
 tools/Replace2SpceWith4.txt
