@@ -5,6 +5,7 @@
 *.gcda
 *.o
 *.a
+*/__pycache__
 
 boards.local.txt
 
@@ -25,5 +26,4 @@ tools/Gui.py
 tools/Replace2SpceWith4.txt
 *(Kopie)*
 platform.local.txt
-
 
