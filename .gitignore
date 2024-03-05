@@ -6,11 +6,18 @@
 *.o
 *.a
 */__pycache__
+!tools/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/10.3.0/*.o
+!tools/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/10.3.0/*.a
+!tools/xtensa-lx106-elf/lib/gcc/xtensa-lx106-elf/10.3.0/plugin/*.a
+!tools/xtensa-lx106-elf/lib/*.a
+#!tools/xtensa-lx106-elf/xtensa-lx106-elf/include/c++/10.3.0/debug/*
+!tools/xtensa-lx106-elf/xtensa-lx106-elf/lib/*.o
+!tools/xtensa-lx106-elf/xtensa-lx106-elf/lib/*.a
 
 boards.local.txt
 
 #Ignore files built by Visual Studio/Visual Micro
-[Dd]ebug*/
+#[Dd]ebug*/
 [Rr]elease*/
 .vs/
 __vm/
@@ -21,9 +28,8 @@ __vm/
 tools/sdk/ld/backup/*
 
 # Ignore my extra files
-*.odt*
-tools/Gui.py
-tools/Replace2SpceWith4.txt
+#tools/Gui.py
+#tools/Replace2SpceWith4.txt
 *(Kopie)*
 platform.local.txt
 
