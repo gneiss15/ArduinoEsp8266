@@ -5,7 +5,7 @@
 
 import os
 import sys
-ToolsDir = os.path.dirname( os.path.realpath( __file__ ) ).replace( '\\', '/' ) + "/" # convert to UNIX format
+ToolsDir = os.path.dirname( os.path.realpath( __file__ ) ).replace( '\\', '/' ) # convert to UNIX format
 try:
     sys.path.insert( 0, ToolsDir ) # ToolsDir
     from utilities import * # If this fails, we can't continue and will bomb below

@@ -387,10 +387,17 @@ public:
         if (afw == 0) {
             // current block is full
             // check for filesystem full (per code in lfs_alloc())
+#if 0 //!GN Change in lfs.h
             if (!(fs->free.i == fs->free.size && fs->free.ack == 0)) {
                 // fs is not full, return a full sector as free space
                 afw = fs->cfg->block_size;
             }
+#else
+            if (!(fs->lookahead.next == fs->lookahead.size && fs->lookahead.ckpoint == 0)) {
+                // fs is not full, return a full sector as free space
+                afw = fs->cfg->block_size;
+            }
+#endif
         }
 
         return afw;

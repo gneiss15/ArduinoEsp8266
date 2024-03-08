@@ -17,7 +17,7 @@
 	path = tools/pyserial
 	url = https://github.com/pyserial/pyserial.git
 [submodule "tools/esptool"]
-	path = tools/esptool
+	path = tools/esptool_4.7.0_Not_OK
 	url = https://github.com/espressif/esptool.git
 [submodule "libraries/Ethernet"]
 	path = libraries/Ethernet
